@@ -10,6 +10,12 @@ body{
 	overflow-x:hidden;
 }
 
+html.loading,
+body.loading{
+	overflow:hidden !important;
+	height:100%;
+}
+
 body{
 	background:radial-gradient(circle at top,#0f172a,#020617 60%);
 	color:#e5e7eb;
