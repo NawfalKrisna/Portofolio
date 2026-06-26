@@ -273,28 +273,38 @@ if (aboutBtn) {
 
 }
 
-const projectCards = document.querySelectorAll(".p-card");
+const projectCards = document.querySelectorAll(".project-card");
 let sliderIndex = 0;
-
+let autoSlide;
 function updateSlider(){
-	projectCards.forEach((card, i)=>{
 
-		card.classList.remove("active","left","right","hidden");
+	projectCards.forEach(card=>{
+		card.classList.remove(
+			"active",
+			"left",
+			"right",
+			"hidden-card"
+		);
 
-		if(i === sliderIndex){
-			card.classList.add("active");
-		}
-		else if(i === sliderIndex - 1){
-			card.classList.add("left");
-		}
-		else if(i === sliderIndex + 1){
-			card.classList.add("right");
-		}
-		else{
-			card.classList.add("hidden");
-		}
-
+		card.classList.add("hidden-card");
 	});
+
+	const left =
+		(sliderIndex - 1 + projectCards.length)
+		% projectCards.length;
+
+	const right =
+		(sliderIndex + 1)
+		% projectCards.length;
+
+	projectCards[sliderIndex].classList.remove("hidden-card");
+	projectCards[sliderIndex].classList.add("active");
+
+	projectCards[left].classList.remove("hidden-card");
+	projectCards[left].classList.add("left");
+
+	projectCards[right].classList.remove("hidden-card");
+	projectCards[right].classList.add("right");
 }
 
 // INIT
@@ -309,20 +319,45 @@ function initDesktop(){
 
 	projectCards.forEach((card, i)=>{
 
-		card.addEventListener("mouseenter", ()=>{
+card.addEventListener("mouseenter", ()=>{
+stopAutoSlide();
+	isHovering = true;
+	clearTimeout(autoTimeout);
 
-			if(i === sliderIndex - 1){
-				sliderIndex--;
-			}
-			else if(i === sliderIndex + 1){
-				sliderIndex++;
-			}
+	// kondisi normal
+	if(i === sliderIndex - 1){
+		sliderIndex--;
+	}
+	else if(i === sliderIndex + 1){
+		sliderIndex++;
+	}
 
-			if(sliderIndex < 0) sliderIndex = projectCards.length - 1;
-			if(sliderIndex >= projectCards.length) sliderIndex = 0;
+	// dari card pertama -> card terakhir
+	else if(sliderIndex === 0 &&
+			i === projectCards.length - 1){
+		sliderIndex--;
+	}
 
-			updateSlider();
-		});
+	// dari card terakhir -> card pertama
+	else if(sliderIndex === projectCards.length - 1 &&
+			i === 0){
+		sliderIndex++;
+	}
+
+	if(sliderIndex < 0){
+		sliderIndex = projectCards.length - 1;
+	}
+
+	if(sliderIndex >= projectCards.length){
+		sliderIndex = 0;
+	}
+
+	updateSlider();
+});
+
+card.addEventListener("mouseleave", ()=>{
+	startAutoSlide();
+});
 
 	});
 }
@@ -379,21 +414,57 @@ if(isMobile){
 }else{
 	initDesktop();
 }
+startAutoSlide();
+
+function startAutoSlide(){
+
+	clearInterval(autoSlide);
+
+	autoSlide = setInterval(()=>{
+
+		sliderIndex++;
+
+		if(sliderIndex >= projectCards.length){
+			sliderIndex = 0;
+		}
+
+		updateSlider();
+
+	},5000);
+
+}
+
+function stopAutoSlide(){
+	clearInterval(autoSlide);
+}
 
 /* =========================
    AUTO SLIDE (SAFE)
 ========================= */
-setInterval(()=>{
+let autoTimeout;
+let isHovering = false;
 
-	sliderIndex++;
+function resetAutoSlide(){
 
-	if(sliderIndex >= projectCards.length){
-		sliderIndex = 0;
-	}
+	clearTimeout(autoTimeout);
 
-	updateSlider();
+	if(isHovering) return;
 
-}, 4000);
+	autoTimeout = setTimeout(()=>{
+
+		sliderIndex++;
+
+		if(sliderIndex >= projectCards.length){
+			sliderIndex = 0;
+		}
+
+		updateSlider();
+
+		resetAutoSlide();
+
+	},5000);
+
+}
 
 /* =========================
    MOBILE NAV TOUCH EFFECT

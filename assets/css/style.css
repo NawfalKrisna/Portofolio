@@ -393,7 +393,7 @@ html.loading{
 	}
 	.profile span{
 		font-size:13px;
-		max-width:145px;
+		max-width:220px;
 	}
 	.profile img{
 		width:32px;
@@ -542,6 +542,11 @@ html.loading{
 }
 .card:hover::before{
 	opacity:1;
+}
+.card-link{
+	text-decoration:none;
+	color:inherit;
+	display:block;
 }
 /* FEATURE CARD */
 .highlight{
