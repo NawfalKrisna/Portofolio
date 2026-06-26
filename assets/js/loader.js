@@ -181,20 +181,13 @@ document
         contactObserver.observe(el);
     });
 
-    /* scroll bar langsung dibalikin barengan saat loader mulai naik */
-    document.documentElement.classList.remove("loading");
-    document.body.classList.remove("loading");
-
     /* loader tetap dihapus setelah animasi selesai */
     setTimeout(() => {
         if (loader) {
             loader.style.display = "none";
         }
-
-    requestAnimationFrame(() => {
-        document.documentElement.classList.remove("loading");
-        document.body.classList.remove("loading");
-    });
-}, 900);
+	document.documentElement.classList.remove("loading");
+	document.body.classList.remove("loading");
+}, 1100);
 
 }, 4000);
