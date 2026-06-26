@@ -277,6 +277,7 @@ const projectCards = document.querySelectorAll(".project-card");
 let sliderIndex = 0;
 let autoSlide;
 function updateSlider(){
+	if (projectCards.length === 0) return;
 
 	projectCards.forEach(card=>{
 		card.classList.remove(
