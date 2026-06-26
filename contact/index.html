@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Contact | Nopal</title>
+
+	<link rel="stylesheet" href="../assets/css/style.css?v=1">
+
+	<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+	
+	<!-- Loader -->
+<div id="loader">
+    <div class="loader-content">
+        <h1 id="loader-text">
+            Hello
+        </h1>
+    </div>
+</div>
+
+	<!-- NAVBAR -->
+<nav class="navbar glass">
+	<div class="profile">
+		<img src="../assets/images/profile/profile.png" class="avatar">
+		<span>Nawfal • AI Engineer</span>
+	</div>
+
+	<button
+		class="menu-toggle"
+		aria-label="Open menu"
+		onclick="document.body.classList.toggle('mobile-menu-open')"
+	>
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<!-- DESKTOP MENU -->
+	<div class="nav-menu">
+		<a href="/portogha" class="nav-item">Home</a>
+		<a href="/portogha/about" class="nav-item">About</a>
+		<a href="/portogha/showcase" class="nav-item">Showcase</a>
+		<a href="/portogha/contact" class="nav-item">Contact</a>
+		<div class="nav-bubble"></div>
+	</div>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu-overlay">
+	<div class="mobile-nav-bubble"></div>
+	<a href="/portogha" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Home</a>
+	<a href="/portogha/about" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">About</a>
+	<a href="/portogha/showcase" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Showcase</a>
+	<a href="/portogha/contact" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Contact</a>
+</div>
+
+<!-- CONTACT HEADER -->
+<section class="contact-hero">
+
+	<h1 class="contact-hero-title">
+		Let's Build Something
+		<span class="gradient">Amazing</span>
+	</h1>
+
+	<p class="contact-hero-desc">
+		Interested in collaboration, AI development,
+		or building futuristic digital products?
+		Feel free to connect with me.
+	</p>
+
+</section>
+
+	<!-- CONTACT -->
+	<section class="contact-section">
+
+		<!-- LEFT -->
+<div class="contact-left glass">
+
+	<h1 class="contact-title">
+		Let's
+		<span class="gradient">Connect</span>
+	</h1>
+
+	<p class="contact-desc">
+		Open for internship opportunities,
+		freelance projects, collaboration,
+		and AI development discussions.
+	</p>
+
+	<div class="status-card glass">
+
+		<div class="status-item">
+			<i class="fa-solid fa-location-dot"></i>
+			<span>Tangerang, Indonesia</span>
+		</div>
+
+		<div class="status-item">
+			<i class="fa-solid fa-graduation-cap"></i>
+			<span>Informatics Student</span>
+		</div>
+
+		<div class="status-item">
+			<i class="fa-solid fa-robot"></i>
+			<span>AI & Machine Learning</span>
+		</div>
+
+		<div class="status-item">
+			<i class="fa-solid fa-bolt"></i>
+			<span>Available For Internship</span>
+		</div>
+
+	</div>
+
+<div class="cv-box">
+
+	<a
+		href="../assets/images/cv/CV_NawfalKrisnaAghafazli.pdf"
+		target="_blank"
+		class="cv-btn"
+	>
+		<i class="fa-solid fa-file-arrow-down"></i>
+		Download CV
+	</a>
+
+</div>
+
+<div class="social-box glass">
+
+	<div class="social-header">
+		<div class="line"></div>
+		<h3>Find Me Online</h3>
+	</div>
+
+		<div class="social-links">
+
+			<a href="https://linkedin.com/in/nawfal-krisna-aghafazli-377a83390" 
+				target="_blank"
+				class="social-link linkedin">
+				<i class="fa-brands fa-linkedin-in"></i>
+			</a>
+
+			<a href="https://github.com/NawfalKrisna" 
+				target="_blank"
+				class="social-link github">
+				<i class="fa-brands fa-github"></i>
+			</a>
+
+			<a href="https://instagram.com/nawfalkrsn" 
+				target="_blank"
+				class="social-link instagram">
+				<i class="fa-brands fa-instagram"></i>
+			</a>
+
+			<a href="https://www.tiktok.com/@ghacode.id"
+				target="_blank"
+				class="social-link tiktok">
+				<i class="fa-brands fa-tiktok"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- RIGHT -->
+<div class="contact-right glass">
+
+	<div class="form-glow"></div>
+
+	<h2 class="contact-title">
+		Send Me A Message
+	</h2>
+
+	<p class="contact-desc">
+		Interested in working together?
+		Send me a message and I'll get back
+		to you as soon as possible.
+	</p>
+
+	<form id="email-form">
+
+		<div class="input-box glass">
+			<input
+				type="text"
+				id="name"
+				placeholder="Your Name"
+				required
+			>
+		</div>
+
+		<div class="input-box glass">
+			<input
+				type="email"
+				id="email"
+				placeholder="Your Email"
+				required
+			>
+		</div>
+
+		<div class="input-box glass">
+			<input
+				type="text"
+				id="subject"
+				placeholder="Subject"
+				required
+			>
+		</div>
+
+		<div class="input-box glass textarea-box">
+			<textarea
+				id="message"
+				placeholder="Your Message"
+				required
+			></textarea>
+		</div>
+
+		<button
+			type="submit"
+			class="send-btn"
+		>
+			<i class="fa-solid fa-paper-plane"></i>
+			Send Message
+		</button>
+
+	</form>
+
+</div>
+
+	</section>
+
+
+	<div id="cursor-glow"></div>
+
+<!-- ALAERT -->
+<div id="toast" class="toast">
+
+	<div class="toast-icon">
+
+		<svg class="progress-ring" width="70" height="70">
+
+			<circle
+				class="progress-bg"
+				cx="35"
+				cy="35"
+				r="30"
+			/>
+
+			<circle
+				class="progress-bar"
+				cx="35"
+				cy="35"
+				r="30"
+			/>
+
+		</svg>
+
+		<i class="fa-solid fa-check"></i>
+
+	</div>
+
+	<div class="toast-content">
+		<h4 id="toast-title">Success</h4>
+		<p id="toast-message">
+			Message sent successfully.
+		</p>
+	</div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+emailjs.init({
+	publicKey: "qT-TYw58crzXUYhgi"
+});
+
+const emailForm =
+	document.getElementById("email-form");
+
+emailForm.addEventListener("submit", function(e){
+
+	e.preventDefault();
+
+	emailjs.send(
+		"service_vgy55yr",
+		"template_3n8h219",
+		{
+			name:
+				document.getElementById("name").value,
+
+			email:
+				document.getElementById("email").value,
+
+			subject:
+				document.getElementById("subject").value,
+
+			message:
+				document.getElementById("message").value
+		}
+	)
+
+	.then(function(response){
+
+		console.log("SUCCESS", response);
+
+		showToast(
+			"Success",
+			"Message sent successfully 🚀"
+		);
+
+		emailForm.reset();
+
+	})
+
+	.catch(function(error){
+
+		console.error(error);
+
+		showToast(
+			"Failed",
+			"Unable to send message."
+		);
+
+	});
+
+});
+
+function showToast(title,message){
+
+	const toast =
+		document.getElementById("toast");
+
+	document.getElementById(
+		"toast-title"
+	).textContent = title;
+
+	document.getElementById(
+		"toast-message"
+	).textContent = message;
+
+	toast.classList.remove("show");
+
+	void toast.offsetWidth;
+
+	toast.classList.add("show");
+
+	setTimeout(()=>{
+
+		toast.classList.remove(
+			"show"
+		);
+
+	},3000);
+
+}
+
+</script>
+
+	<script src="../assets/js/loader.js?v=1"></script>
+	<script src="../assets/js/script.js?v=1"></script>
+
+</body>
+
+</html>

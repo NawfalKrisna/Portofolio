@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Nawfal | AI Engineer</title>
+<link rel="stylesheet" href="assets/css/style.css?v=1">
+</head>
+
+<body>
+	
+	<!-- Loader -->
+<div id="loader">
+    <div class="loader-content">
+        <h1 id="loader-text">
+            Hello
+        </h1>
+    </div>
+</div>
+
+	<!-- NAVBAR -->
+<nav class="navbar glass">
+	<div class="profile">
+		<img src="assets/images/profile/profile.png" class="avatar">
+		<span>Nawfal • AI Engineer</span>
+	</div>
+
+	<button
+		class="menu-toggle"
+		aria-label="Open menu"
+		onclick="document.body.classList.toggle('mobile-menu-open')"
+	>
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<!-- DESKTOP MENU -->
+	<div class="nav-menu">
+		<a href="/portogha" class="nav-item">Home</a>
+		<a href="/portogha/about" class="nav-item">About</a>
+		<a href="/portogha/showcase" class="nav-item">Showcase</a>
+		<a href="/portogha/contact" class="nav-item">Contact</a>
+		<div class="nav-bubble"></div>
+	</div>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu-overlay">
+	<div class="mobile-nav-bubble"></div>
+	<a href="/portogha" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Home</a>
+	<a href="/portogha/about" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">About</a>
+	<a href="/portogha/showcase" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Showcase</a>
+	<a href="/portogha/contact" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Contact</a>
+</div>
+
+<section class="home">
+
+	<div class="home-left">
+		<span class="tag glass">
+			Artificial Intelligence Engineer
+		</span>
+
+		<h1 class="title">
+			Building Intelligent
+			<span class="gradient">
+				AI Systems
+			</span>
+		</h1>
+
+		<p class="desc">
+			I design and develop AI powered applications,
+			focused on machine learning, automation,
+			and intelligent digital products.
+		</p>
+
+		<div class="buttons">
+			<a href="/portogha/showcase" class="glass glass-btn primary">
+				View Projects
+			</a>
+
+			<a href="assets/images/cv/CV_NawfalKrisnaAghafazli.pdf" target="_blank" class="glass-btn">
+				Download CV
+			</a>
+		</div>
+
+		<div class="stack">
+			<span class="glass">Python</span>
+			<span class="glass">TensorFlow</span>
+			<span class="glass">PyTorch</span>
+			<span class="glass">OpenAI</span>
+			<span class="glass">LangChain</span>
+		</div>
+	</div>
+
+<div class="home-right">
+
+    <!-- ROBOT -->
+    <div id="robot-container">
+        <model-viewer
+            src="assets/models/robot.glb"
+            id="robot"
+            alt="AI Robot"
+            ar
+            ar-modes="webxr scene-viewer quick-look"
+            environment-image="neutral"
+        >
+        </model-viewer>
+
+        <span class="robot-text">
+            Double Click To Explore
+        </span>
+
+    </div>
+
+    <!-- CARDS -->
+    <div id="cards-container">
+
+        <div class="card glass" data-card="projects">
+            <h3>Last Project</h3>
+            <p>Latest AI project I've built.</p>
+        </div>
+
+        <div class="card glass" data-card="research">
+            <h3>Research Journal</h3>
+            <p>Published journals and research.</p>
+        </div>
+
+        <div class="card glass" data-card="activity">
+            <h3>Activity Statistics</h3>
+            <p>Projects, certificates and achievements.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<canvas id="explode-canvas"></canvas>
+
+<div id="cursor-glow"></div>
+
+<script type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+<script src="assets/js/loader.js?v=1"></script>
+<script src="assets/js/script.js?v=1"></script>
+<script src="assets/js/robot.js?v=1"></script> 
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About | Nopal</title>
+	<link rel="stylesheet" href="../assets/css/style.css?v=1">
+
+</head>
+
+<body>
+
+	<!-- Loader -->
+<div id="loader">
+    <div class="loader-content">
+        <h1 id="loader-text">
+            Hello
+        </h1>
+    </div>
+</div>
+
+	<!-- NAVBAR -->
+<nav class="navbar glass">
+	<div class="profile">
+		<img src="../assets/images/profile/profile.png" class="avatar">
+		<span>Nawfal • AI Engineer</span>
+	</div>
+
+	<button
+		class="menu-toggle"
+		aria-label="Open menu"
+		onclick="document.body.classList.toggle('mobile-menu-open')"
+	>
+		<span></span>
+		<span></span>
+		<span></span>
+	</button>
+
+	<!-- DESKTOP MENU -->
+	<div class="nav-menu">
+		<a href="/portogha" class="nav-item">Home</a>
+		<a href="/portogha/about" class="nav-item">About</a>
+		<a href="/portogha/showcase" class="nav-item">Showcase</a>
+		<a href="/portogha/contact" class="nav-item">Contact</a>
+		<div class="nav-bubble"></div>
+	</div>
+</nav>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu-overlay">
+	<div class="mobile-nav-bubble"></div>
+	<a href="/portogha" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Home</a>
+	<a href="/portogha/about" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">About</a>
+	<a href="/portogha/showcase" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Showcase</a>
+	<a href="/portogha/contact" class="mobile-nav-item" onclick="document.body.classList.remove('mobile-menu-open')">Contact</a>
+</div>
+
+
+	<!-- ABOUT HERO -->
+	<section class="about-page">
+		<div class="about-container">
+
+			<!-- LEFT SIDE -->
+			<div class="about-left">
+				<span class="tag glass">Hey there.</span>
+				<h1 class="about-title">
+					Let me introduce<br>
+					<span class="gradient">Myself</span> 👋
+				</h1>
+
+				<p class="about-text">
+					A developer passionate about building modern web
+					applications and intelligent digital systems.
+				</p>
+
+				<a
+					href="/portogha/contact"
+					class="about-btn"
+				>
+					Need a Developer?
+				</a>
+			</div>
+
+
+<!-- RIGHT SIDE -->
+<div class="about-right">
+	<div class="about-scroll">
+
+		<div class="qa-item" data-num="01">
+			<span class="qa-number">01</span>
+			<div class="qa-content">
+				<p class="qa-question">What's your name?</p>
+				<h3 class="qa-answer">Nawfal Krisna Aghafazli</h3>
+			</div>
+		</div>
+
+		<div class="qa-item" data-num="02">
+			<span class="qa-number">02</span>
+			<div class="qa-content">
+				<p class="qa-question">What's your expertise?</p>
+				<ul class="qa-list">
+					<li>Microsoft Office Expert</li>
+					<li>Software & Web Development</li>
+					<li>UI/UX Designer</li>
+					<li>Project Manager</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="qa-item" data-num="03">
+			<span class="qa-number">03</span>
+			<div class="qa-content">
+				<p class="qa-question">How's your journey?</p>
+				<p class="qa-answer">
+					I started learning web development in
+					<span class="year">2025</span>.  
+					Now until <span class="year orange">today</span> I'm still focused on
+					learning to build modern UI and Web3 experiences.
+				</p>
+			</div>
+		</div>
+
+		<div class="qa-item" data-num="04">
+			<div class="qa-number">04</div>
+			<div class="qa-content">
+				<p class="qa-question">How about your experience?</p>
+				<div class="experience">
+					<div class="exp-item">
+						<div class="exp-dot"></div>
+						<div>
+							<h3>Karirnex</h3>
+							<p>as Bootcamp Participant (Data Analyst - SQL, Python)</p>
+							<span class="exp-badge orange">1 Month</span>
+						</div>
+					</div>
+
+					<div class="exp-item">
+						<div class="exp-dot"></div>
+						<div>
+							<h3>SMKN 9 Tangerang</h3>
+							<p>Nursing Assistant</p>
+							<span class="exp-badge purple">3 Months</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="qa-item" data-num="05">
+			<div class="qa-number">05</div>
+			<div class="qa-content">
+				<p class="qa-question">Who's behind the code?</p>
+				<img src="../assets/images/profile/ppabout.png" class="qa-photo">
+			</div>
+		</div>
+
+	</div>
+</div>
+	</section>
+
+	<div id="cursor-glow"></div>
+
+	<script src="../assets/js/loader.js?v=1"></script>
+	<script src="../assets/js/script.js?v=1"></script>
+	<script src="../assets/js/about.js?v=1"></script>
+
+</body>
+</html>
